@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nostalgia.dao.StockDAO">
+    <select id="checkStock" parameterType="java.lang.Integer" resultType="Stock">
+        select * from stock where id=#{id}
+    </select>
+
+    <update id="updateSale" parameterType="Stock" >
+        update stock set sale=#{sale},version=#{version} where id=#{id} and version=#{version}-1
+    </update>
+
+</mapper>

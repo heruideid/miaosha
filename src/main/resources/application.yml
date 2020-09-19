@@ -1,0 +1,22 @@
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        orm:
+#          mybastis: DEBUG
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.nostalgia.entity
+spring:
+  redis:
+    sentinel:
+      master: cluster1
+      nodes: 81.70.44.97:26379
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: herui15823439009
+    url: jdbc:mysql://localhost:3306/ms?serverTimezone=GMT
+    type: com.alibaba.druid.pool.DruidDataSource
