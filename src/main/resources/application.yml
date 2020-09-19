@@ -13,10 +13,10 @@ spring:
   redis:
     sentinel:
       master: cluster1
-      nodes: 81.70.44.97:26379
+      nodes:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: herui15823439009
+    password:
     url: jdbc:mysql://localhost:3306/ms?serverTimezone=GMT
     type: com.alibaba.druid.pool.DruidDataSource
